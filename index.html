@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex AI</title>
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@550;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      color: #ecfeff;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    
+    /* Lucide icons alignment setup */
+    .lucide {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Scrollbar decoration */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #00f0ff;
+      border-radius: 4px;
+    }
+
+    /* Scroll scrolling viewport transitions */
+    [data-entrance] {
+      opacity: 0;
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    [data-entrance="slide-up"] {
+      transform: translateY(50px);
+    }
+    [data-entrance="fade-in"] {
+      /* Just opacity */
+    }
+    [data-entrance="zoom-in"] {
+      transform: scale(0.88);
+    }
+    [data-entrance="skew-in"] {
+      transform: translateY(35px) rotateX(8deg);
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+    
+    /* Animation Active classes triggered by IntersectionObserver window listener */
+    [data-entrance].animate-active {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotateX(0);
+    }
+  </style>
+</head>
+<body style="background: #020208;">
+
+  <!-- Navbar Navigation (Sticky top-0) -->
+  <nav class="sticky top-0 z-50 py-4 px-6 border-b backdrop-blur-md" style="border-color: rgba(255,255,255,0.08); background-color: rgba(0, 0, 0, 0.9); text-color: #ecfeff;">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div style="background-color: #00f0ff;" class="w-3.5 h-3.5 rounded-sm"></div>
+        <span class="text-xl font-bold uppercase tracking-wider text-current" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">
+          Vortex AI
+        </span>
+      </div>
+      <div class="flex gap-4 items-center font-mono text-xs opacity-80 overflow-x-auto max-w-[60vw] md:max-w-none no-scrollbar">
+        <a href="#sec-0" class="hover:underline transition-opacity font-bold shrink-0">/seusfluxosde</a>
+        <a href="#sec-1" class="hover:underline transition-opacity font-bold shrink-0">/engineinteli</a>
+        <a href="#sec-2" class="hover:underline transition-opacity font-bold shrink-0">/autonomiacog</a>
+        <a href="#sec-3" class="hover:underline transition-opacity font-bold shrink-0">/pordentrodae</a>
+        <a href="#sec-4" class="hover:underline transition-opacity font-bold shrink-0">/experimenteo</a>
+        <a href="#sec-5" class="hover:underline transition-opacity font-bold shrink-0">/vortexaicorp</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modular Sections Content -->
+  <main class="space-y-16 py-8">
+    
+    <section id="sec-0" data-entrance="slide-up" class="max-w-4xl mx-auto text-center py-20 px-6">
+      <div class="inline-block mb-4 px-3 py-1 text-[10px] tracking-widest uppercase font-semibold" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3); font-family: monospace;">
+        ✦ GERADO POR WOW EXPERT ✦
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight uppercase" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">
+        Seus fluxos de trabalho geridos por Agentes Autônomos de Elite.
+      </h1>
+      <p class="text-base md:text-lg opacity-85 max-w-2xl mx-auto mb-8">
+        Vortex AI orquestra inteligências artificiais integradas aos seus sistemas de forma invisível, automatizando processos complexos em segundos com zero fricção.
+      </p>
+      
+      <div class="mb-10 w-full max-w-xl mx-auto rounded-xl overflow-hidden border border-[rgba(255,255,255,0.1)] shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop&q=80" alt="Banner" class="w-full h-auto max-h-[350px] object-cover" referrerpolicy="no-referrer" />
+      </div>
+      
+      
+      
+      <a href="#registro" class="px-8 py-4 text-xs font-bold uppercase transition-all duration-300 inline-block hover:scale-105" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.6); font-family: monospace; box-shadow: 0 0 12px rgba(6,182,212,0.3);">
+        Iniciar Integração Grátis
+      </a>
+      
+    </section>
+        
+
+    <section id="sec-1" data-entrance="slide-up" class="max-w-4xl mx-auto py-16 px-6">
+      <div class="text-center max-w-lg mx-auto mb-10">
+        <h2 class="text-2xl md:text-3xl font-extrabold uppercase" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Engine Inteligente Ultra-Moderna</h2>
+        <p class="text-xs opacity-70 mt-1">Um ecossistema modular desenhado para executar tarefas cognitivas complexas sem supervisão humana.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+      <div class="p-6 rounded-xl transition-all duration-300 flex flex-col justify-between" style="background: rgba(0, 0, 0, 0.9); border: 1px solid rgba(6, 182, 212, 0.4);">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <div class="p-2.5 rounded-lg" style="color: #00f0ff; background: rgba(255,255,255,0.04);">
+              <i data-lucide="users"></i>
+            </div>
+            <span class="px-2 py-0.5 text-[8px]" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3); font-family: monospace;">HOT</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2 uppercase" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Agentes Multi-Persona</h3>
+          <p class="text-xs opacity-80 leading-relaxed min-h-[40px]">Substitua processos repetitivos por inteligências especializadas que conversam entre si para resolver problemas em tempo recorde.</p>
+        </div>
+        
+        
+      </div>
+        
+
+      <div class="p-6 rounded-xl transition-all duration-300 flex flex-col justify-between" style="background: rgba(0, 0, 0, 0.9); border: 1px solid rgba(6, 182, 212, 0.4);">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <div class="p-2.5 rounded-lg" style="color: #00f0ff; background: rgba(255,255,255,0.04);">
+              <i data-lucide="zap"></i>
+            </div>
+            <span class="px-2 py-0.5 text-[8px]" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3); font-family: monospace;">99.9% ACCURACY</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2 uppercase" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Execução Auto-Otimizável</h3>
+          <p class="text-xs opacity-80 leading-relaxed min-h-[40px]">Nossos modelos analisam gargalos em tempo real e reajustam a rota lógica de todas as tarefas de forma totalmente autônoma.</p>
+        </div>
+        
+        
+      </div>
+        
+
+      <div class="p-6 rounded-xl transition-all duration-300 flex flex-col justify-between" style="background: rgba(0, 0, 0, 0.9); border: 1px solid rgba(6, 182, 212, 0.4);">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <div class="p-2.5 rounded-lg" style="color: #00f0ff; background: rgba(255,255,255,0.04);">
+              <i data-lucide="shield"></i>
+            </div>
+            <span class="px-2 py-0.5 text-[8px]" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3); font-family: monospace;">SECURE</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2 uppercase" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Criptografia Quântica</h3>
+          <p class="text-xs opacity-80 leading-relaxed min-h-[40px]">Processamento de dados sensíveis blindado por arquiteturas de segurança de última geração integradas diretamente na rede interna.</p>
+        </div>
+        
+        
+      </div>
+        
+
+      <div class="p-6 rounded-xl transition-all duration-300 flex flex-col justify-between" style="background: rgba(0, 0, 0, 0.9); border: 1px solid rgba(6, 182, 212, 0.4);">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <div class="p-2.5 rounded-lg" style="color: #00f0ff; background: rgba(255,255,255,0.04);">
+              <i data-lucide="database"></i>
+            </div>
+            <span class="px-2 py-0.5 text-[8px]" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3); font-family: monospace;">AI-READY</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2 uppercase" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Ponte Neural de Dados</h3>
+          <p class="text-xs opacity-80 leading-relaxed min-h-[40px]">Conecte bases SQL, APIs legadas e ferramentas de chat em minutos através de conectores autônomos sem necessidade de código extra.</p>
+        </div>
+        
+        
+      </div>
+        
+      </div>
+    </section>
+        
+
+    <section id="sec-2" data-entrance="slide-up" class="text-center py-20 px-6 relative overflow-hidden flex flex-col items-center justify-center">
+      <div class="text-5xl md:text-8xl font-black opacity-15 uppercase absolute tracking-widest select-none" style="color: #00f0ff; font-family: 'Space Grotesk', 'Inter', sans-serif;">
+        AUTONOMIA COGNITIVA ABSOLUTA
+      </div>
+      <div class="text-4xl md:text-7xl font-black py-4 select-none relative z-10 uppercase tracking-wide" style="color: #00f0ff; font-family: 'Space Grotesk', 'Inter', sans-serif;">
+        AUTONOMIA COGNITIVA ABSOLUTA
+      </div>
+      
+      <p class="text-xs md:text-sm tracking-widest max-w-sm mt-4 font-mono font-bold relative z-10">
+        Redefinindo os limites do que softwares inteligentes são capazes de executar sozinhos.
+      </p>
+      
+    </section>
+        
+
+    <section id="sec-3" data-entrance="slide-up" class="max-w-xl mx-auto py-16 px-6">
+      <div class="text-center max-w-lg mx-auto mb-10">
+        <h2 class="text-2xl md:text-3xl font-extrabold uppercase" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Por dentro da engenharia do Vortex AI</h2>
+        <p class="text-xs opacity-70 mt-1">Diferenciais técnicos de ponta criados especificamente para empresas que não aceitam falhas ou gargalos operacionais.</p>
+      </div>
+      <div class="space-y-4">
+        
+      <div class="flex gap-4 p-5 items-center rounded-xl font-sans" style="background: rgba(0, 0, 0, 0.9); border: 1px solid rgba(6, 182, 212, 0.4);">
+        <div style="color: #00f0ff; background: rgba(255,255,255,0.035);" class="p-3 rounded-lg flex-shrink-0">
+          <i data-lucide="activity"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex gap-2 items-center">
+            <h4 class="text-sm font-bold uppercase tracking-wide" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Latência Sub-Milissegundo</h4>
+            <span class="text-[8px] px-1.5 py-0.2" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3); font-family: monospace;">NEURAL NET</span>
+          </div>
+          <p class="text-xs opacity-75 mt-0.5 leading-snug">Decisões tomadas e executadas na velocidade da luz através de nossa infraestrutura de servidores de alta performance descentralizados.</p>
+          
+          
+        </div>
+      </div>
+        
+
+      <div class="flex gap-4 p-5 items-center rounded-xl font-sans" style="background: rgba(0, 0, 0, 0.9); border: 1px solid rgba(6, 182, 212, 0.4);">
+        <div style="color: #00f0ff; background: rgba(255,255,255,0.035);" class="p-3 rounded-lg flex-shrink-0">
+          <i data-lucide="trending-up"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex gap-2 items-center">
+            <h4 class="text-sm font-bold uppercase tracking-wide" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Aprendizado Contínuo</h4>
+            <span class="text-[8px] px-1.5 py-0.2" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3); font-family: monospace;">DYNAMIC</span>
+          </div>
+          <p class="text-xs opacity-75 mt-0.5 leading-snug">O sistema absorve o contexto das interações e feedbacks diários da sua empresa, refinando as rotinas e minimizando erros.</p>
+          
+          
+        </div>
+      </div>
+        
+
+      <div class="flex gap-4 p-5 items-center rounded-xl font-sans" style="background: rgba(0, 0, 0, 0.9); border: 1px solid rgba(6, 182, 212, 0.4);">
+        <div style="color: #00f0ff; background: rgba(255,255,255,0.035);" class="p-3 rounded-lg flex-shrink-0">
+          <i data-lucide="coins"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex gap-2 items-center">
+            <h4 class="text-sm font-bold uppercase tracking-wide" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Controle Total de Custos</h4>
+            <span class="text-[8px] px-1.5 py-0.2" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3); font-family: monospace;">EFFICIENT</span>
+          </div>
+          <p class="text-xs opacity-75 mt-0.5 leading-snug">Monitore o gasto de tokens, APIs consumidas e performance analítica de cada agente de IA através de um painel transparente e minimalista.</p>
+          
+          
+        </div>
+      </div>
+        
+      </div>
+    </section>
+        
+
+    <section id="sec-4" data-entrance="slide-up" class="max-w-lg mx-auto py-16 px-6 font-sans">
+      <div class="p-8 rounded-2xl border text-center relative" style="background: rgba(0, 0, 0, 0.9); border: 1px solid rgba(6, 182, 212, 0.4);">
+        <div class="mb-4 inline-flex items-center justify-center p-3 rounded-full bg-white/5 mx-auto text-lime-400">
+          <i data-lucide="zap"></i>
+        </div>
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-2 uppercase" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Experimente o amanhã hoje mesmo</h2>
+        <p class="text-xs opacity-80 leading-relaxed max-w-sm mx-auto mb-6">Junte-se à lista restrita de empresas que já estão rodando fluxos autônomos escaláveis com o Vortex AI. Vagas limitadas para a fase beta.</p>
+        
+        <form onsubmit="event.preventDefault(); alert('Obrigado! Seus dados foram salvos com sucesso.'); this.reset();" class="space-y-4 max-w-sm mx-auto">
+          <div class="text-left font-bold">
+            <input type="text" required placeholder="Seu Nome Completo" class="w-full bg-black/40 border border-white/10 px-4 py-2.5 text-xs rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-white/20 font-bold" style="color: #ffffff;" />
+          </div>
+          <div class="text-left font-bold">
+            <input type="email" required placeholder="seu@email-elegante.com" class="w-full bg-black/40 border border-white/10 px-4 py-2.5 text-xs rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-white/20 font-bold" style="color: #ffffff;" />
+          </div>
+          <button type="submit" class="w-full py-3.5 text-xs tracking-wider uppercase font-bold transition-all duration-300 block hover:scale-[1.02]" style="background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.6); font-family: monospace; box-shadow: 0 0 12px rgba(6,182,212,0.3);">
+            Solicitar Acesso Antecipado
+          </button>
+        </form>
+      </div>
+    </section>
+        
+
+    <footer id="sec-5" data-entrance="slide-up" class="max-w-4xl mx-auto py-12 px-6 border-t mt-16" style="border-color: rgba(255,255,255,0.08); color: #ecfeff;">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="space-y-3">
+          <h3 class="text-lg font-bold uppercase tracking-wider" style="font-family: 'Space Grotesk', 'Inter', sans-serif;">Vortex AI Corporation</h3>
+          <p class="text-xs opacity-75 leading-relaxed max-w-xs">Construindo as bases de infraestrutura cognitiva para as próximas gerações de negócios autônomos.</p>
+          <div class="flex gap-3 pt-2 opacity-60 text-[10px]">
+            <span>INSTAGRAM</span>
+            <span>LINKEDIN</span>
+            <span>WHATSAPP</span>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-widest opacity-60">Navegação</h4>
+          <div class="flex flex-col gap-2">
+            
+              <a href="#sec-0" class="text-xs opacity-75 hover:opacity-100 transition-opacity text-left hover:underline">
+                /seusfluxosde
+              </a>
+            
+              <a href="#sec-1" class="text-xs opacity-75 hover:opacity-100 transition-opacity text-left hover:underline">
+                /engineinteli
+              </a>
+            
+              <a href="#sec-2" class="text-xs opacity-75 hover:opacity-100 transition-opacity text-left hover:underline">
+                /autonomiacog
+              </a>
+            
+              <a href="#sec-3" class="text-xs opacity-75 hover:opacity-100 transition-opacity text-left hover:underline">
+                /pordentrodae
+              </a>
+            
+              <a href="#sec-4" class="text-xs opacity-75 hover:opacity-100 transition-opacity text-left hover:underline">
+                /experimenteo
+              </a>
+            
+              <a href="#sec-5" class="text-xs opacity-75 hover:opacity-100 transition-opacity text-left hover:underline">
+                /vortexaicorp
+              </a>
+            
+          </div>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-widest opacity-60">Recursos</h4>
+          
+            <div class="flex flex-col gap-2">
+              
+          <a href="https://docs.vortexai.io" class="text-xs opacity-75 hover:opacity-100 transition-opacity flex items-center gap-1.5" style="color: #ecfeff; text-decoration: none;">
+            <i data-lucide="sparkles"></i>
+            <span>Documentação Técnica</span>
+          </a>
+        
+
+          <a href="https://github.com/vortexai" class="text-xs opacity-75 hover:opacity-100 transition-opacity flex items-center gap-1.5" style="color: #ecfeff; text-decoration: none;">
+            <i data-lucide="sparkles"></i>
+            <span>Repositório do Core</span>
+          </a>
+        
+
+          <a href="https://discord.gg/vortexai" class="text-xs opacity-75 hover:opacity-100 transition-opacity flex items-center gap-1.5" style="color: #ecfeff; text-decoration: none;">
+            <i data-lucide="sparkles"></i>
+            <span>Comunidade Discord</span>
+          </a>
+        
+
+          <a href="https://vortexai.io/suporte" class="text-xs opacity-75 hover:opacity-100 transition-opacity flex items-center gap-1.5" style="color: #ecfeff; text-decoration: none;">
+            <i data-lucide="sparkles"></i>
+            <span>Suporte Premium</span>
+          </a>
+        
+            </div>
+          
+        </div>
+      </div>
+      <div class="pt-8 mt-8 border-t border-[rgba(255,255,255,0.05)] flex flex-col sm:flex-row justify-between items-center text-[10px] opacity-40 font-mono gap-4 font-bold">
+        <span>© 2026 VORTEX AI. TODOS OS DIREITOS RESERVADOS.</span>
+        <span>FUTURISTIC-NEON PRO POWERED</span>
+      </div>
+    </footer>
+        
+  </main>
+
+  <!-- Footer block -->
+  
+
+  <!-- Lucide icons loader script -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+
+    // Scroll interactive viewport observer initializer
+    document.addEventListener("DOMContentLoaded", () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: "-20px 0px -40px 0px",
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-active");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("[data-entrance]").forEach(el => {
+        // If element is already in screen or needs no transition, animate it
+        if (el.getAttribute("data-entrance") === "none") {
+          el.classList.add("animate-active");
+        } else {
+          observer.observe(el);
+        }
+      });
+    });
+
+    // Interatividade Real 3D do WOW Builder
+    document.addEventListener("DOMContentLoaded", () => {
+      const redDotColor = "0, 240, 255";
+      const accentColorHex = "#00f0ff";
+      const canvasContainers = document.querySelectorAll(".wow-3d-canvas-container");
+      
+      canvasContainers.forEach(container => {
+        const type = container.getAttribute("data-3d-type");
+        const canvas = container.querySelector("canvas");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+        
+        let width, height;
+        const resize = () => {
+          width = container.clientWidth;
+          height = container.clientHeight;
+          canvas.width = width * window.devicePixelRatio;
+          canvas.height = height * window.devicePixelRatio;
+          ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+        };
+        resize();
+        window.addEventListener("resize", () => {
+          resize();
+        });
+        
+        // Track mouse movement over root parent card/section for parallax
+        let offsetX = 0;
+        let offsetY = 0;
+        const rootElement = container.closest("div") || container.closest("section") || document.body;
+        
+        rootElement.addEventListener("mousemove", (e) => {
+          const rect = rootElement.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width;
+          const y = (e.clientY - rect.top) / rect.height;
+          offsetX = (x - 0.5) * 2;
+          offsetY = (y - 0.5) * 2;
+        });
+        
+        rootElement.addEventListener("mouseleave", () => {
+          offsetX = 0;
+          offsetY = 0;
+        });
+
+        // Initialize variables for animations
+        let frame = 0;
+        
+        // 1. STARFIELD Setup
+        const stars = [];
+        if (type === "starfield") {
+          for (let i = 0; i < 90; i++) {
+            stars.push({
+              x: (Math.random() - 0.5) * 1000,
+              y: (Math.random() - 0.5) * 1000,
+              z: Math.random() * 1000,
+              size: Math.random() * 1.5 + 0.5,
+              speed: Math.random() * 3 + 2
+            });
+          }
+        }
+        
+        // 2. CYBER-RAIN Setup
+        const cols = Math.floor(width / 14) || 20;
+        const rainDrops = [];
+        if (type === "cyber-rain") {
+          for (let i = 0; i < cols; i++) {
+            rainDrops[i] = Math.random() * -100;
+          }
+        }
+        
+        // 3. WIREFRAME HYPERCUBE Setup
+        const cubeVertices = [
+          { x: -1, y: -1, z: -1 }, { x: 1, y: -1, z: -1 }, { x: 1, y: 1, z: -1 }, { x: -1, y: 1, z: -1 },
+          { x: -1, y: -1, z: 1 }, { x: 1, y: -1, z: 1 }, { x: 1, y: 1, z: 1 }, { x: -1, y: 1, z: 1 }
+        ];
+        const cubeEdges = [
+          [0, 1], [1, 2], [2, 3], [3, 0],
+          [4, 5], [5, 6], [6, 7], [7, 4],
+          [0, 4], [1, 5], [2, 6], [3, 7]
+        ];
+        
+        const tick = () => {
+          frame++;
+          ctx.clearRect(0, 0, width, height);
+          ctx.fillStyle = "rgba(10, 10, 14, 0.25)";
+          ctx.fillRect(0, 0, width, height);
+          
+          if (type === "starfield") {
+            ctx.fillStyle = "rgba(10, 10, 18, 0.8)";
+            ctx.fillRect(0, 0, width, height);
+            for (let i = 0; i < stars.length; i++) {
+              const star = stars[i];
+              star.z -= star.speed + Math.abs(offsetY * 5);
+              const dx = star.x - offsetX * 1500;
+              const dy = star.y - offsetY * 1500;
+              if (star.z <= 0) {
+                star.z = 1000;
+                star.x = (Math.random() - 0.5) * 1000;
+                star.y = (Math.random() - 0.5) * 1000;
+              }
+              const depthScale = 300 / star.z;
+              const projX = dx * depthScale + width / 2;
+              const projY = dy * depthScale + height / 2;
+              if (projX >= 0 && projX <= width && projY >= 0 && projY <= height) {
+                const size = star.size * depthScale * 2;
+                const starAlpha = Math.min(1, 1 - star.z / 1000);
+                ctx.beginPath();
+                ctx.arc(projX, projY, size, 0, Math.PI * 2);
+                ctx.fillStyle = "rgba(" + redDotColor + ", " + starAlpha + ")";
+                ctx.shadowBlur = size * 3;
+                ctx.shadowColor = accentColorHex;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+              }
+            }
+          }
+          else if (type === "waves") {
+            ctx.strokeStyle = "rgba(" + redDotColor + ", 0.5)";
+            ctx.lineWidth = 1.5;
+            const waveLines = 8;
+            const segmentCount = 45;
+            for (let j = 0; j < waveLines; j++) {
+              ctx.beginPath();
+              const waveProgress = j / waveLines;
+              const waveAlpha = (1 - waveProgress) * 0.7 + 0.1;
+              ctx.strokeStyle = "rgba(" + redDotColor + ", " + waveAlpha + ")";
+              ctx.shadowBlur = j === 0 ? 10 : 0;
+              ctx.shadowColor = accentColorHex;
+              for (let i = 0; i <= segmentCount; i++) {
+                const segProgress = i / segmentCount;
+                const x = segProgress * width;
+                const angle = segProgress * Math.PI * 3 + frame * 0.03 + j * 0.4;
+                const tiltFactor = (offsetX * 30 * (1 - segProgress)) + (offsetY * 30);
+                const amplitude = 22 * (1.2 - waveProgress) * Math.sin(frame * 0.005 + j * 0.2);
+                const y = (height / 2) + Math.sin(angle) * amplitude + (j * 14 - (waveLines * 7)) + tiltFactor;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+              }
+              ctx.stroke();
+            }
+            ctx.shadowBlur = 0;
+          }
+          else if (type === "cube") {
+            const rotX = frame * 0.012 + offsetY * 0.5;
+            const rotY = frame * 0.008 + offsetX * 0.5;
+            const rotZ = frame * 0.006;
+            const rotatedVertices = cubeVertices.map(v => {
+              let x1 = v.x * Math.cos(rotZ) - v.y * Math.sin(rotZ);
+              let y1 = v.x * Math.sin(rotZ) + v.y * Math.cos(rotZ);
+              let z1 = v.z;
+              let x2 = x1 * Math.cos(rotY) + z1 * Math.sin(rotY);
+              let y2 = y1;
+              let z2 = -x1 * Math.sin(rotY) + z1 * Math.cos(rotY);
+              let x3 = x2;
+              let y3 = y2 * Math.cos(rotX) - z2 * Math.sin(rotX);
+              let z3 = y2 * Math.sin(rotX) + z2 * Math.cos(rotX);
+              return { x: x3, y: y3, z: z3 };
+            });
+            const d = 3.5;
+            const scaleFactor = Math.min(width, height) * 0.35;
+            const projVertices = rotatedVertices.map(v => {
+              const perspectiveScale = d / (v.z + d);
+              const x = (v.x * perspectiveScale * scaleFactor) + width / 2;
+              const y = (v.y * perspectiveScale * scaleFactor) + height / 2;
+              return { x, y, z: v.z };
+            });
+            projVertices.forEach(v => {
+              const depthOpacity = Math.max(0.1, Math.min(1.0, (d - v.z) / (d * 1.5)));
+              ctx.beginPath();
+              ctx.arc(v.x, v.y, 4, 0, Math.PI * 2);
+              ctx.fillStyle = "rgba(" + redDotColor + ", " + depthOpacity + ")";
+              ctx.shadowBlur = 8;
+              ctx.shadowColor = accentColorHex;
+              ctx.fill();
+            });
+            ctx.lineWidth = 2;
+            cubeEdges.forEach(([start, end]) => {
+              const vStart = projVertices[start];
+              const vEnd = projVertices[end];
+              const avgZ = (vStart.z + vEnd.z) / 2;
+              const depthOpacity = Math.max(0.08, Math.min(1.0, (d - avgZ) / (d * 1.5)));
+              ctx.beginPath();
+              ctx.moveTo(vStart.x, vStart.y);
+              ctx.lineTo(vEnd.x, vEnd.y);
+              ctx.strokeStyle = "rgba(" + redDotColor + ", " + (depthOpacity * 0.7) + ")";
+              ctx.shadowBlur = 5 * depthOpacity;
+              ctx.shadowColor = accentColorHex;
+              ctx.stroke();
+            });
+            ctx.shadowBlur = 0;
+          }
+          else if (type === "cyber-rain") {
+            ctx.fillStyle = "rgba(10, 10, 15, 0.85)";
+            ctx.fillRect(0, 0, width, height);
+            ctx.font = "bold 11px monospace";
+            const chars = "XYZ✦⌥⌘⚡💎⚡0101λ✿✵❖⚡".split("");
+            const actualCols = Math.min(cols, Math.floor(width / 14));
+            for (let i = 0; i < actualCols; i++) {
+              const char = chars[Math.floor(Math.random() * chars.length)];
+              const xCoord = i * 15 + (offsetX * 15);
+              const yCoord = rainDrops[i] * 12;
+              if (yCoord > 0 && yCoord < height) {
+                const isTip = Math.random() > 0.94;
+                ctx.fillStyle = isTip ? "#ffffff" : "rgba(" + redDotColor + ", 0.75)";
+                if (isTip) {
+                  ctx.shadowBlur = 8;
+                  ctx.shadowColor = accentColorHex;
+                }
+                ctx.fillText(char, xCoord, yCoord);
+                ctx.shadowBlur = 0;
+              }
+              rainDrops[i] += 1 + Math.random() * 0.8 + Math.abs(offsetY * 1.5);
+              if (rainDrops[i] * 12 > height && Math.random() > 0.975) {
+                rainDrops[i] = 0;
+              }
+            }
+          }
+          else if (type === "plasma") {
+            const timeFactor = frame * 0.015;
+            const midX = width / 2 + (offsetX * (width * 0.25));
+            const midY = height / 2 + (offsetY * (height * 0.25));
+            const grad = ctx.createRadialGradient(midX, midY, 15, midX, midY, Math.max(width, height) * 0.75);
+            grad.addColorStop(0, "rgba(" + redDotColor + ", 0.45)");
+            grad.addColorStop(0.3, "rgba(" + redDotColor + ", 0.2)");
+            grad.addColorStop(0.65, "rgba(" + redDotColor + ", 0.05)");
+            grad.addColorStop(1, "rgba(10, 10, 14, 0)");
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, width, height);
+            const secX = width / 2 + Math.cos(timeFactor) * (width * 0.3) + (offsetX * 25);
+            const secY = height / 2 + Math.sin(timeFactor) * (height * 0.35) + (offsetY * 25);
+            const secGrad = ctx.createRadialGradient(secX, secY, 5, secX, secY, 120);
+            secGrad.addColorStop(0, "rgba(" + redDotColor + ", 0.3)");
+            secGrad.addColorStop(0.5, "rgba(" + redDotColor + ", 0.08)");
+            secGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
+            ctx.fillStyle = secGrad;
+            ctx.fillRect(0, 0, width, height);
+            ctx.fillStyle = "rgba(" + redDotColor + ", 0.35)";
+            for (let i = 0; i < 8; i++) {
+              const px = (Math.sin(timeFactor + i * 4) * 0.45 + 0.5) * width + (offsetX * 10);
+              const py = (Math.cos(timeFactor * 0.8 + i * 2) * 0.45 + 0.5) * height + (offsetY * 10);
+              ctx.beginPath();
+              ctx.arc(px, py, 2.5, 0, Math.PI * 2);
+              ctx.shadowBlur = 6;
+              ctx.shadowColor = accentColorHex;
+              ctx.fill();
+            }
+            ctx.shadowBlur = 0;
+          }
+          
+          requestAnimationFrame(tick);
+        };
+        tick();
+      });
+    });
+  </script>
+</body>
+</html>
